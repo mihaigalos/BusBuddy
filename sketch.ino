@@ -18,8 +18,13 @@ static const char demoText[] = "Qu'est-ce que tu fais ce WE? ;)";
 
 
 void setup() {
+<<<<<<< HEAD
     
     Adafruit_ST7735 tft = Adafruit_ST7735(cs, dc, sda,scl, rst); 
+=======
+	
+	Adafruit_ST7735 tft = Adafruit_ST7735(cs, dc, sda,scl, rst); 
+>>>>>>> 104f682aa2a4eeae36ed715f6919ecd0de6fdab1
     tft.initR(INITR_BLACKTAB);
 
     tft.setRotation(2);
@@ -32,7 +37,11 @@ void setup() {
     tft.drawLine(0, 0, tft.width()-1, tft.height()-1, ST7735_YELLOW);
     tft.drawLine(tft.width()-1, 0, 0, tft.height()-1, ST7735_YELLOW);
 
+<<<<<<< HEAD
     tft.drawPixel(0, tft.height()/2, ST7735_GREEN);
+=======
+	tft.drawPixel(0, tft.height()/2, ST7735_GREEN);
+>>>>>>> 104f682aa2a4eeae36ed715f6919ecd0de6fdab1
 
 }
 

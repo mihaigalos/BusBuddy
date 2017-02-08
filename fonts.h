@@ -12,6 +12,7 @@ Please read README.pdf for details
 #define _fonts_h
 
 #if ARDUINO >= 100
+<<<<<<< HEAD
 #include "Arduino.h"
 #include "Print.h"
 #elif defined(SPARK)
@@ -37,14 +38,47 @@ Please read README.pdf for details
 #define COMICS_8 3
 #define GLCDFONT 4
 #define TEST 5
+=======
+ #include "Arduino.h"
+ #include "Print.h"
+#elif defined (SPARK)
+#include "application.h"
+#else
+ #include "WProgram.h"
+#endif
+
+//Font selection for compiling - comment out or uncomment definitions as required
+//NOTE: GLCDFONT is default font and always included
+#undef TIMESNEWROMAN8
+#undef CENTURYGOTHIC8
+#undef  ARIAL8
+#undef  COMICSANSMS8
+#undef  TESTFONT
+
+// Font selection descriptors - Add an entry for each new font and number sequentially
+#define TIMESNR_8	0
+#define CENTURY_8	1
+#define ARIAL_8		2
+#define COMICS_8	3
+#define GLCDFONT	4
+#define TEST		5
+>>>>>>> 104f682aa2a4eeae36ed715f6919ecd0de6fdab1
 
 #define FONT_START 0
 #define FONT_END 1
 
+<<<<<<< HEAD
 struct FontDescriptor {
   uint8_t width;   // width in bits
   uint8_t height;  // char height in bits
   uint16_t offset; // offset of char into char array
+=======
+struct FontDescriptor
+{
+	uint8_t	width;		// width in bits
+	uint8_t	height; 	// char height in bits
+	uint16_t offset;	// offset of char into char array
+>>>>>>> 104f682aa2a4eeae36ed715f6919ecd0de6fdab1
 };
 
 // Font references - add pair of references for each new font
@@ -76,4 +110,8 @@ extern const uint8_t testBitmaps[];
 extern const FontDescriptor testDescriptors[];
 #endif
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 104f682aa2a4eeae36ed715f6919ecd0de6fdab1
 #endif
