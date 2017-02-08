@@ -19,9 +19,6 @@
 #ifndef _ADAFRUIT_ST7735H_
 #define _ADAFRUIT_ST7735H_
 
-// Mihai
-//#define SPARK 1 // !!!!!!!!!!! TEMPORARILY !!!!!!!!!
-
 #if ARDUINO >= 100
 #include "Arduino.h"
 #include "Print.h"
@@ -31,12 +28,7 @@
 #include "WProgram.h"
 #endif
 
-// Mihai
-//#if defined(SPARK)
 #include "Adafruit_mfGFX.h"
-//#else
-//#include <Adafruit_GFX.h>
-//#endif
 
 #if defined(SPARK)
 #define pgm_read_byte(addr) (*(const unsigned char *)(addr))
@@ -54,7 +46,7 @@ typedef unsigned char prog_uchar;
 #include <avr/pgmspace.h>
 #endif
 
-// Mihai : taken from TFT_ILI9163C-master
+// taken from TFT_ILI9163C-master
 #define __OFFSET 32 // this is the offset of my display, 160 - 128 = 32
 /*
  * Note 1: The __144_RED_PCB__ display has hardware addressing of 128 x 160
